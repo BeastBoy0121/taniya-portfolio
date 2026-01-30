@@ -9,8 +9,10 @@ import {
 
 /* ===================== MODEL ===================== */
 
+import heroModel from "../assets/models/hero.glb?url";
+
 const Model = () => {
-  const gltf = useGLTF("/src/assets/models/hero.glb");
+  const gltf = useGLTF(heroModel);
 
   return (
     <group
@@ -108,7 +110,7 @@ const Home3D = () => {
               style={{
                 opacity: Math.max((textProgress - 0.15) * 2, 0),
                 transform: `translateY(${20 - textProgress * 20}px)`,
-                
+
               }}
             >
               <span className="inline-block -rotate-6 bg-[#1f3b7a] px-4 py-2 text-white font-semibold tracking-widest">

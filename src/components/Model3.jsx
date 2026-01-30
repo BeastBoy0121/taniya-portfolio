@@ -1,10 +1,12 @@
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 
+import officeGirlModel from "../assets/models/businesswoman.glb?url";
+
 const OfficeGirl = () => {
   const group = useRef();
 
-  const { scene, animations } = useGLTF("src/assets/models/businesswoman.glb");
+  const { scene, animations } = useGLTF(officeGirlModel);
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const OfficeGirl = () => {
       object={scene}
       scale={1.6}
       position={[0, 0, 0]}
-      rotation={[-0.19, -Math.PI/2, 0]}
+      rotation={[-0.19, -Math.PI / 2, 0]}
     />
   );
 };
